@@ -35,20 +35,15 @@
     const osc = (time, period, phase, amp) =>
       Math.sin(((time + phase) * Math.PI * 2) / period) * amp;
 
+    // MÁS lenta (fluye largo, dominante)
     const indigoY =
-      osc(t, 6.8, 0.0, 18) +
-      osc(t, 2.9, 0.4, 5) +
-      scrollPush * 0.65;
+      osc(t, 12, 0.0, 22) + osc(t, 4.5, 0.3, 6) + scrollPush * 0.65;
 
-    const mintY =
-      osc(t, 9.6, 1.1, 26) +
-      osc(t, 3.6, 0.9, 6) +
-      scrollPush * 0.45;
+    // Intermedia (orgánica, balance)
+    const mintY = osc(t, 9, 1.1, 30) + osc(t, 3.8, 0.9, 7) + scrollPush * 0.45;
 
-    const pinkY =
-      osc(t, 7.9, 2.2, 22) +
-      osc(t, 3.1, 1.7, 5) +
-      scrollPush * 0.55;
+    // MÁS rápida (energía, acento)
+    const pinkY = osc(t, 6, 2.2, 26) + osc(t, 3.2, 1.7, 6) + scrollPush * 0.55;
 
     root.style.setProperty("--wave-indigo-y", `${indigoY.toFixed(2)}px`);
     root.style.setProperty("--wave-mint-y", `${mintY.toFixed(2)}px`);

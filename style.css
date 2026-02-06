@@ -1,0 +1,180 @@
+:root {
+  --pink: rgba(255, 88, 195, 0.85);
+  --indigo: rgba(77, 66, 198, 0.65);
+  --mint: rgb(178 249 241);
+
+  --wave-tilt: 0deg;
+
+  --wave-indigo-y: 0px;
+  --wave-mint-y: 0px;
+  --wave-pink-y: 0px;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.amh-header {
+  position: relative;
+  z-index: 50;
+  background: #ffffff;
+}
+
+.amh-logo {
+  height: 85px;
+  width: auto;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.btn-amh {
+  background: #000;
+  color: #fff;
+}
+
+.amh-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 85vh;
+  background: #ffffff;
+}
+
+.amh-hero-content {
+  position: relative;
+  z-index: 3;
+  min-height: 85vh;
+  padding-bottom: 10vh;
+}
+
+.amh-hero-text h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.amh-hero-text p {
+  font-size: 1.5rem;
+  max-width: 520px;
+  margin-bottom: 1.5rem;
+}
+
+.amh-hero-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: min(640px, 44vw);
+  pointer-events: none;
+}
+
+.btn-hero {
+  background-color: #3ddab3;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.amh-hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: 82vh;
+  object-fit: contain;
+  display: block;
+}
+
+.amh-waves {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.amh-waves-svg {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  width: 140%;
+  height: 140%;
+  transform:
+    translate(-50%, -50%)
+    translateY(6vh)
+    rotate(var(--wave-tilt));
+  opacity: 0.95;
+  will-change: transform;
+}
+
+.wave {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.wave-indigo {
+  stroke: var(--indigo);
+  stroke-width: 26;
+  opacity: 0.9;
+  filter: url(#softGlow);
+  transform: translateY(var(--wave-indigo-y));
+}
+
+.wave-mint {
+  stroke: var(--mint);
+  stroke-width: 34;
+  opacity: 0.65;
+  filter: url(#softGlow);
+  transform: translateY(var(--wave-mint-y));
+}
+
+.wave-pink {
+  stroke: var(--pink);
+  stroke-width: 30;
+  opacity: 0.95;
+  filter: url(#pinkRibbonGlow);
+  transform: translateY(var(--wave-pink-y));
+}
+
+@media (max-width: 991.98px) {
+  .amh-hero-content {
+    padding-top: 7vh;
+    padding-bottom: 36vh;
+  }
+
+  .amh-hero-image {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(520px, 86vw);
+  }
+
+  .amh-waves-svg {
+    top: 70%;
+    width: 190%;
+    height: 190%;
+    transform:
+      translate(-50%, -50%)
+      translateY(calc(var(--wave-y) + 10vh))
+      rotate(var(--wave-tilt));
+  }
+
+  .amh-hero-text h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amh-waves-svg {
+    transform:
+      translate(-50%, -50%)
+      translateY(0px)
+      rotate(0deg);
+  }
+}

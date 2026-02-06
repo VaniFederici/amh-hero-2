@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <title>AMH Web</title>
+</head>
+
+<body>
+  <header class="amh-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="assets/logo.png" alt="AMH Catalyst Center" class="amh-logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#amhNav" aria-controls="amhNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="amhNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Investors &amp; Sponsors</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          </ul>
+
+          <div class="d-flex">
+            <a href="#" class="btn btn-amh rounded-pill px-4">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="amh-hero">
+  <div class="amh-waves" aria-hidden="true">
+    <svg class="amh-waves-svg" viewBox="0 0 1400 520" preserveAspectRatio="none">
+      <defs>
+        <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="7" result="blur"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="blur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+
+        <filter id="pinkRibbonGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="5" result="b"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="b"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <path class="wave wave-indigo" pathLength="1400"
+        d="M -200 320
+           C 60 240, 180 160, 320 250
+           C 470 360, 560 360, 680 260
+           C 830 140, 940 170, 1060 260
+           C 1180 350, 1250 340, 1400 280"></path>
+
+      <path class="wave wave-mint"pathLength="1400"
+        d="M -200 360
+           C 40 80, 220 60, 360 230
+           C 520 430, 620 460, 760 260
+           C 890 70, 1040 90, 1160 240
+           C 1260 360, 1320 360, 1400 300"></path>
+
+      <path class="wave wave-pink"pathLength="1400"
+        d="M -200 390
+           C 80 330, 240 140, 420 260
+           C 560 360, 640 340, 760 260
+           C 900 160, 1040 150, 1160 260
+           C 1260 360, 1320 410, 1400 330"></path>
+    </svg>
+  </div>
+
+  <div class="container amh-hero-content">
+    <div class="row">
+      <div class="col-lg-8 ms-lg-auto amh-hero-text">
+        <h1>Women founders belong at the table.</h1>
+        <div class="subtitle">
+          <p>
+          AMH Catalyst Center supports women founders with expert guidance, trusted networks, and the tools needed to become fundable.
+        </p>
+        <a href="#" class="btn btn-hero rounded-pill px-4">Let's chat</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="amh-hero-image" aria-hidden="true">
+    <img src="assets/heroimage.png" alt="">
+  </div>
+</section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
